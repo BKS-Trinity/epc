@@ -1,0 +1,75 @@
+<h1>New Patient</h1>
+
+<%= form_for :patient, url: patients_path do |f| %>
+	<p>
+		<%= f.label :firstname, "First name:" %><br>
+		<%= f.text_field :firstname %>
+	</p>
+	
+	<p>
+		<%= f.label :middlename, "Middle name:" %><br>
+		<%= f.text_field :middlename %>
+	</p>
+	
+	<p>
+		<%= f.label :lastname, "Last name:" %><br>
+		<%= f.text_field :lastname %>
+	</p>
+	
+	<p>
+		<%= f.label :dateofbirth, "Date of birth:" %><br>
+		<%= f.date_field :dateofbirth %>
+	</p>
+	
+	<p>
+		<%= f.label :sex, "Sex:" %><br>
+		<%= f.radio_button :sex, "male" %>
+		<%= f.label :sex_male, "Male" %><br>
+		<%= f.radio_button :sex, "female" %>
+		<%= f.label :sex_female, "Female" %><br>
+	</p>
+	
+	<p>
+		<%= f.label :email, "E-mail Address:" %><br>
+		<%= f.text_field :email %>
+	</p>
+	
+	<p>
+		<%= f.label :phone, "Phone Number:" %><br>
+		<%= f.text_field :phone %>
+	</p>
+	
+	<p>
+		<%= f.label :mobile, "Mobile Number:" %><br>
+		<%= f.text_field :mobile %>
+	</p>
+	
+	<p>
+		<%= f.label :street, "Street Address:" %><br>
+		<%= f.text_field :street %>
+	</p>
+	
+	<p>
+		<%= f.label :city, "City:" %><br>
+		<%= f.text_field :city %>
+	</p>
+	
+	<p>
+		<%= f.label :postcode, "Post/Zip Code:" %><br>
+		<%= f.text_field :postcode %>
+	</p>
+	
+	<p>
+		<%= f.label :state, "State/Province:" %><br>
+		<%= f.text_field :state %>
+	</p>
+	
+	<p>
+		<%= f.label :country, "Country:" %><br>
+		<%= f.text_field :country %>
+	</p>
+	
+	<p>
+		<%= f.submit %>
+	</p>
+<% end %>
