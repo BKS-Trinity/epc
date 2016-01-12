@@ -36,6 +36,13 @@ class PatientsController < ApplicationController
 		end
 	end
 	
+	def destroy
+		@patient = Patient.find(params[:id])
+		@patient.destroy
+		
+		redirect_to patients_path
+	end
+	
 	private
 		def patient_params
 			params.require(:patient).permit(:firstname, :middlename, :lastname, :dateofbirth, :sex, :email, :phone, :mobile, :street, :city, :postcode, :state, :country)
