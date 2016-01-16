@@ -1,3 +1,5 @@
+<h2>Patient:</h2>
+
 <p>
 	<strong>First Name:</strong>
 	<%= @patient.firstname %>
@@ -62,6 +64,23 @@
 	<strong>Country:</strong>
 	<%= @patient.country %>
 </p>
+
+<h2>Medical Record:</h2>
+<% if @patient.medical_record.nil? %>
+	<p>
+		No medical record found for this patient.
+	</p>
+	<%= form_for([@patient, @patient.build_medical_record]) do |f| %>
+		<p>
+			<%= f.submit "Create a medical record" %>
+		</p>
+	<% end %>
+<% else %>
+	<p>
+		<strong>Date Of Creation:</strong>
+		<%= @patient.medical_record.created_at.to_date %>
+	</p>
+<% end %>
 
 <%= link_to 'Back', patients_path %>
 | <%= link_to 'Edit', edit_patient_path(@patient) %>
