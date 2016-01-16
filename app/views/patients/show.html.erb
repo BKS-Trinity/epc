@@ -80,6 +80,11 @@
 		<strong>Date Of Creation:</strong>
 		<%= @patient.medical_record.created_at.to_date %>
 	</p>
+	<p>
+		<%= link_to 'Destroy medical record', [@patient, @patient.medical_record],
+			method: :delete,
+			data: { confirm: 'Are you sure?' } %>
+	</p>
 <% end %>
 
 <%= link_to 'Back', patients_path %>
