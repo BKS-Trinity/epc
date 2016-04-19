@@ -1,0 +1,18 @@
+<h2>Medical case:</h2>
+
+<p>
+	<strong>Onset Of Disease:</strong>
+	<%= @medical_case.onsetofdisease %>
+</p>
+
+<p>
+	<strong>Disease:</strong>
+	<%= @medical_case.disease_id %>
+</p>
+
+<p>
+	<strong>Doctor:</strong>
+	<%= @medical_case.doctor_id %>
+</p>
+
+<%= link_to 'Back', medical_record_medical_cases_path %>

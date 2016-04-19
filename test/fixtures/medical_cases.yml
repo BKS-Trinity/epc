@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  onsetofdisease: 2016-04-18
+  medical_record_id: 
+  disease_id: 
+  doctor_id: 
+
+two:
+  onsetofdisease: 2016-04-18
+  medical_record_id: 
+  disease_id: 
+  doctor_id: 

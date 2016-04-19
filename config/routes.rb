@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   resources :patients do
 		resources :medical_records
 	end
+	
+	resources :medical_records do
+		resources :medical_cases
+	end
   
   # get 'main/index'
   root 'main#index'

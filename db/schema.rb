@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160116111801) do
+ActiveRecord::Schema.define(version: 20160418210335) do
+
+  create_table "medical_cases", force: true do |t|
+    t.date     "onsetofdisease"
+    t.integer  "medical_record_id"
+    t.integer  "disease_id"
+    t.integer  "doctor_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "medical_cases", ["disease_id"], name: "index_medical_cases_on_disease_id"
+  add_index "medical_cases", ["doctor_id"], name: "index_medical_cases_on_doctor_id"
+  add_index "medical_cases", ["medical_record_id"], name: "index_medical_cases_on_medical_record_id"
 
   create_table "medical_records", force: true do |t|
     t.integer  "patient_id"

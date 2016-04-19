@@ -1,0 +1,23 @@
+<h1>Listing medical cases</h1>
+
+<%= link_to 'New medical case', new_medical_record_medical_case_path %>
+
+<table>
+	<tr>
+		<th>Onset Of Disease</th>
+		<th>Disease</th>
+		<th>Doctor</th>
+		<th colspan="3"></th>
+	</tr>
+	
+	<% @medical_cases.each do |medical_case| %>
+	<tr>
+		<td><%= medical_case.onsetofdisease %></td>
+		<td><%= medical_case.disease_id %></td>
+		<td><%= medical_case.doctor_id %></td>
+		<td><%= link_to 'Show', medical_record_medical_case_path(medical_case.medical_record_id, medical_case) %></td>
+	</tr>
+	<% end %>
+</table>
+
+<%= link_to 'Back', [@medical_record.patient] %>
