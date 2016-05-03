@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 	resources :diseases
 	
 	resources :nurses
+	
+	resources :doctors
   
   # get 'main/index'
   root 'main#index'

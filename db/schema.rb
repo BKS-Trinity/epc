@@ -11,11 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160503154201) do
+ActiveRecord::Schema.define(version: 20160503161228) do
 
   create_table "diseases", force: true do |t|
     t.string   "name"
     t.string   "icd10"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "doctors", force: true do |t|
+    t.string   "firstname"
+    t.string   "middlename"
+    t.string   "lastname"
+    t.date     "dateofbirth"
+    t.string   "sex"
+    t.string   "email"
+    t.string   "phone"
+    t.string   "mobile"
+    t.string   "street"
+    t.string   "city"
+    t.string   "postcode"
+    t.string   "state"
+    t.string   "country"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,0 +1,45 @@
+<h1>Listing doctors</h1>
+
+<%= link_to 'New doctor', new_doctor_path %>
+
+<table>
+	<tr>
+		<th>First Name</th>
+		<th>Middle Name</th>
+		<th>Last Name</th>
+		<th>Date Of Birth</th>
+		<th>Sex</th>
+		<th>E-mail Address</th>
+		<th>Phone Number</th>
+		<th>Mobile Number</th>
+		<th>Street Address</th>
+		<th>City</th>
+		<th>Post/Zip Code</th>
+		<th>State/Province</th>
+		<th>Country</th>
+		<th colspan="3"></th>
+	</tr>
+	
+	<% @doctors.each do |doctor| %>
+	<tr>
+		<td><%= doctor.firstname %></td>
+		<td><%= doctor.middlename %></td>
+		<td><%= doctor.lastname %></td>
+		<td><%= doctor.dateofbirth %></td>
+		<td><%= doctor.sex %></td>
+		<td><%= doctor.email %></td>
+		<td><%= doctor.phone %></td>
+		<td><%= doctor.mobile %></td>
+		<td><%= doctor.street %></td>
+		<td><%= doctor.city %></td>
+		<td><%= doctor.postcode %></td>
+		<td><%= doctor.state %></td>
+		<td><%= doctor.country %></td>
+		<td><%= link_to 'Show', doctor_path(doctor) %></td>
+		<td><%= link_to 'Edit', edit_doctor_path(doctor) %></td>
+		<td><%= link_to 'Destroy', doctor_path(doctor), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	</tr>
+	<% end %>
+</table>
+
+<%= link_to 'Back', root_path %>
