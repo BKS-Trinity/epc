@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 	
 	resources :diseases
 	
+	resources :drugs
+	
 	resources :nurses
 	
 	resources :doctors

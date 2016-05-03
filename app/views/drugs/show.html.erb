@@ -1,0 +1,14 @@
+<h2>Drug:</h2>
+
+<p>
+	<strong>Name:</strong>
+	<%= @drug.name %>
+</p>
+
+<p>
+	<strong>ATC code:</strong>
+	<%= @drug.atc %>
+</p>
+
+<%= link_to 'Back', drugs_path %>
+| <%= link_to 'Edit', edit_drug_path(@drug) %>
