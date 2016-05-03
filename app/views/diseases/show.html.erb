@@ -1,0 +1,14 @@
+<h2>Disease:</h2>
+
+<p>
+	<strong>Name:</strong>
+	<%= @disease.name %>
+</p>
+
+<p>
+	<strong>ICD-10 code:</strong>
+	<%= @disease.icd10 %>
+</p>
+
+<%= link_to 'Back', diseases_path %>
+| <%= link_to 'Edit', edit_disease_path(@disease) %>
