@@ -26,6 +26,22 @@ class MedicalCasesController < ApplicationController
 		@medical_cases = @medical_record.medical_cases
 	end
 	
+	def edit
+		@medical_record = MedicalRecord.find(params[:medical_record_id])
+		@medical_case = @medical_record.medical_cases.find(params[:id])
+	end
+	
+	def update
+		@medical_record = MedicalRecord.find(params[:medical_record_id])
+		@medical_case = @medical_record.medical_cases.find(params[:id])
+		
+		if @medical_case.update(medical_case_params)
+			redirect_to medical_record_medical_case_url(@medical_record, @medical_case)
+		else
+			render 'edit'
+		end
+	end
+	
 	def destroy
 		@medical_record = MedicalRecord.find(params[:medical_record_id])
 		@medical_case = @medical_record.medical_cases.find(params[:id])

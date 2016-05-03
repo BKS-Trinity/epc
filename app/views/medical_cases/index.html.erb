@@ -16,6 +16,7 @@
 		<td><%= medical_case.disease_id %></td>
 		<td><%= medical_case.doctor_id %></td>
 		<td><%= link_to 'Show', medical_record_medical_case_path(medical_case.medical_record_id, medical_case) %></td>
+		<td><%= link_to 'Edit', edit_medical_record_medical_case_path(medical_case.medical_record_id, medical_case) %></td>
 		<td><%= link_to 'Destroy', medical_record_medical_case_path(medical_case.medical_record_id, medical_case),
 			method: :delete, data: { confirm: 'Are you sure?' } %></td>
 	</tr>
