@@ -26,6 +26,13 @@ class MedicalCasesController < ApplicationController
 		@medical_cases = @medical_record.medical_cases
 	end
 	
+	def destroy
+		@medical_record = MedicalRecord.find(params[:medical_record_id])
+		@medical_case = @medical_record.medical_cases.find(params[:id])
+		@medical_case.destroy
+		redirect_to medical_record_medical_cases_path
+	end
+	
 	private
 		def medical_case_params
 			params.require(:medical_case).permit(:medical_record_id, :onsetofdisease, :disease_id, :doctor_id)
