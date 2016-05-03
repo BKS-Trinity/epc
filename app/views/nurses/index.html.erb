@@ -1,0 +1,45 @@
+<h1>Listing nurses</h1>
+
+<%= link_to 'New nurse', new_nurse_path %>
+
+<table>
+	<tr>
+		<th>First Name</th>
+		<th>Middle Name</th>
+		<th>Last Name</th>
+		<th>Date Of Birth</th>
+		<th>Sex</th>
+		<th>E-mail Address</th>
+		<th>Phone Number</th>
+		<th>Mobile Number</th>
+		<th>Street Address</th>
+		<th>City</th>
+		<th>Post/Zip Code</th>
+		<th>State/Province</th>
+		<th>Country</th>
+		<th colspan="3"></th>
+	</tr>
+	
+	<% @nurses.each do |nurse| %>
+	<tr>
+		<td><%= nurse.firstname %></td>
+		<td><%= nurse.middlename %></td>
+		<td><%= nurse.lastname %></td>
+		<td><%= nurse.dateofbirth %></td>
+		<td><%= nurse.sex %></td>
+		<td><%= nurse.email %></td>
+		<td><%= nurse.phone %></td>
+		<td><%= nurse.mobile %></td>
+		<td><%= nurse.street %></td>
+		<td><%= nurse.city %></td>
+		<td><%= nurse.postcode %></td>
+		<td><%= nurse.state %></td>
+		<td><%= nurse.country %></td>
+		<td><%= link_to 'Show', nurse_path(nurse) %></td>
+		<td><%= link_to 'Edit', edit_nurse_path(nurse) %></td>
+		<td><%= link_to 'Destroy', nurse_path(nurse), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	</tr>
+	<% end %>
+</table>
+
+<%= link_to 'Back', root_path %>

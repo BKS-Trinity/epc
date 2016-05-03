@@ -1,0 +1,69 @@
+<h2>Nurse:</h2>
+
+<p>
+	<strong>First Name:</strong>
+	<%= @nurse.firstname %>
+</p>
+
+<p>
+	<strong>Middle Name:</strong>
+	<%= @nurse.middlename %>
+</p>
+
+<p>
+	<strong>Last Name:</strong>
+	<%= @nurse.lastname %>
+</p>
+
+<p>
+	<strong>Date Of Birth:</strong>
+	<%= @nurse.dateofbirth %>
+</p>
+
+<p>
+	<strong>Sex:</strong>
+	<%= @nurse.sex %>
+</p>
+
+<p>
+	<strong>E-mail Address:</strong>
+	<%= @nurse.email %>
+</p>
+
+<p>
+	<strong>Phone Number:</strong>
+	<%= @nurse.phone %>
+</p>
+
+<p>
+	<strong>Mobile Number:</strong>
+	<%= @nurse.mobile %>
+</p>
+
+<p>
+	<strong>Street Address:</strong>
+	<%= @nurse.street %>
+</p>
+
+<p>
+	<strong>City:</strong>
+	<%= @nurse.city %>
+</p>
+
+<p>
+	<strong>Post/Zip Code:</strong>
+	<%= @nurse.postcode %>
+</p>
+
+<p>
+	<strong>State/Province:</strong>
+	<%= @nurse.state %>
+</p>
+
+<p>
+	<strong>Country:</strong>
+	<%= @nurse.country %>
+</p>
+
+<%= link_to 'Back', nurses_path %>
+| <%= link_to 'Edit', edit_nurse_path(@nurse) %>
