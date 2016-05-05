@@ -1,0 +1,69 @@
+<h2>Doctor:</h2>
+
+<p>
+	<strong>First Name:</strong>
+	<%= @doctor.firstname %>
+</p>
+
+<p>
+	<strong>Middle Name:</strong>
+	<%= @doctor.middlename %>
+</p>
+
+<p>
+	<strong>Last Name:</strong>
+	<%= @doctor.lastname %>
+</p>
+
+<p>
+	<strong>Date Of Birth:</strong>
+	<%= @doctor.dateofbirth %>
+</p>
+
+<p>
+	<strong>Sex:</strong>
+	<%= @doctor.sex %>
+</p>
+
+<p>
+	<strong>E-mail Address:</strong>
+	<%= @doctor.email %>
+</p>
+
+<p>
+	<strong>Phone Number:</strong>
+	<%= @doctor.phone %>
+</p>
+
+<p>
+	<strong>Mobile Number:</strong>
+	<%= @doctor.mobile %>
+</p>
+
+<p>
+	<strong>Street Address:</strong>
+	<%= @doctor.street %>
+</p>
+
+<p>
+	<strong>City:</strong>
+	<%= @doctor.city %>
+</p>
+
+<p>
+	<strong>Post/Zip Code:</strong>
+	<%= @doctor.postcode %>
+</p>
+
+<p>
+	<strong>State/Province:</strong>
+	<%= @doctor.state %>
+</p>
+
+<p>
+	<strong>Country:</strong>
+	<%= @doctor.country %>
+</p>
+
+<%= link_to 'Back', doctors_path %>
+| <%= link_to 'Edit', edit_doctor_path(@doctor) %>

@@ -1,0 +1,30 @@
+<%= form_for [@medical_record, @medical_case] do |f| %>
+	<% if @medical_case.errors.any? %>
+	<div id="error_explanation">
+		<h2><%= pluralize(@medical_case.errors.count, "error") %> prohibited this case from being saved:</h2>
+		<ul>
+		<% @medical_case.errors.full_messages.each do |msg| %>
+			<li><%= msg %></li>
+		<% end %>
+		</ul>
+	</div>
+	<% end %>
+	<p>
+		<%= f.label :onsetofdisease, "Onset Of Disease:" %><br>
+		<%= f.date_field :onsetofdisease %>
+	</p>
+	
+	<p>
+		<%= f.label :disease_id, "Disease:" %><br>
+		<%= f.text_field :disease_id %>
+	</p>
+	
+	<p>
+		<%= f.label :doctor_id, "Doctor:" %><br>
+		<%= f.text_field :doctor_id %>
+	</p>
+	
+	<p>
+		<%= f.submit %>
+	</p>
+<% end %>
