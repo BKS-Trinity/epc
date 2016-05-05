@@ -1,5 +1,9 @@
-body{ font-family: verdana,tahoma;font-size: 11px;color: #357B94;background: image-url('tlo1.jpg');}	
-td { font-family: verdana,tahoma;font-size: 11px;color: #003399;}	
+body{ font-family: verdana,tahoma;font-size: 11px;color: #357B94;background: image-url('tlo1.jpg');background-position: center center;
+    background-attachment: fixed;}	
+tr {table-layout: fixed;
+    word-wrap: break-word;
+	}
+td { font-family: verdana,tahoma;font-size: 11px;color: #003399; word-wrap: break-word;table-layout: fixed;}	
 
 
 a:link,a:visited,a:active {color: #357B94;text-decoration: none;}
