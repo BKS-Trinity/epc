@@ -71,24 +71,30 @@
 		No medical record found for this patient.
 	</p>
 	<%= form_for([@patient, @patient.build_medical_record]) do |f| %>
+	<br>
 		<p>
-			<%= f.submit "Create a medical record" %>
+			<%= f.submit "Create a medical record", class: 'btn btn-success btn-sm custom' %>
 		</p>
+	<br>
 	<% end %>
 <% else %>
 	<p>
 		<strong>Date Of Creation:</strong>
 		<%= @patient.medical_record.created_at.to_date %>
 	</p>
+	<br>
 	<p>
 		<%= link_to 'Show medical cases',
-			[@patient.medical_record, @patient.medical_record.medical_cases.build] %>
+			[@patient.medical_record, @patient.medical_record.medical_cases.build], class: 'btn btn-info btn-sm alink custom' %>
 	</p>
+	<br>
 	<p>
 		<%= link_to 'Destroy medical record', [@patient, @patient.medical_record],
 			method: :delete,
-			data: { confirm: 'Are you sure?' } %>
+			data: { confirm: 'Are you sure?' },
+			class: 'btn btn-danger btn-sm alink custom' %>
 	</p>
+	<br>
 <% end %>
 
 <%= link_to 'Back', patients_path, class: 'btn btn-warning alink' %>
