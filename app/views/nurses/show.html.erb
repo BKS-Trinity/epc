@@ -64,6 +64,8 @@
 	<strong>Country:</strong>
 	<%= @nurse.country %>
 </p>
+<br>
+<br>
 
-<%= link_to 'Back', nurses_path %>
-| <%= link_to 'Edit', edit_nurse_path(@nurse) %>
+<%= link_to 'Back', nurses_path, class: 'btn btn-warning alink' %>
+| <%= link_to 'Edit', edit_nurse_path(@nurse), class: 'btn btn-primary btn-sm alink' %>
