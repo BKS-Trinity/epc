@@ -1,5 +1,5 @@
 <h2>Disease:</h2>
-
+<br>
 <p>
 	<strong>Name:</strong>
 	<%= @disease.name %>
@@ -9,6 +9,7 @@
 	<strong>ICD-10 code:</strong>
 	<%= @disease.icd10 %>
 </p>
-
-<%= link_to 'Back', diseases_path %>
-| <%= link_to 'Edit', edit_disease_path(@disease) %>
+<br>
+<br>
+<%= link_to 'Back', diseases_path, class: 'btn btn-warning alink' %>
+| <%= link_to 'Edit', edit_disease_path(@disease), class: 'btn btn-primary btn-sm alink' %>
