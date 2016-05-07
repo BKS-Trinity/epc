@@ -1,8 +1,10 @@
-<h1>Listing doctors</h1>
-
-<%= link_to 'New doctor', new_doctor_path %>
-
-<table>
+<h1><center><b><u>Listing doctors</u></b></center></h1>
+<br>
+<h4><%= link_to 'New doctor', new_doctor_path, class: 'patient' %></h4>
+<br>
+<br>
+<div class="table-responsive">
+<table class="table table-bordered">
 	<tr>
 		<th>First Name</th>
 		<th>Middle Name</th>
@@ -17,7 +19,7 @@
 		<th>Post/Zip Code</th>
 		<th>State/Province</th>
 		<th>Country</th>
-		<th colspan="3"></th>
+		<th colspan="3">Options</th>
 	</tr>
 	
 	<% @doctors.each do |doctor| %>
@@ -35,11 +37,13 @@
 		<td><%= doctor.postcode %></td>
 		<td><%= doctor.state %></td>
 		<td><%= doctor.country %></td>
-		<td><%= link_to 'Show', doctor_path(doctor) %></td>
-		<td><%= link_to 'Edit', edit_doctor_path(doctor) %></td>
-		<td><%= link_to 'Destroy', doctor_path(doctor), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		<td><%= link_to 'Show', doctor_path(doctor), class: 'btn btn-info btn-sm alink' %></td>
+		<td><%= link_to 'Edit', edit_doctor_path(doctor), class: 'btn btn-primary btn-sm alink' %></td>
+		<td><%= link_to 'Destroy', doctor_path(doctor), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm alink' %></td>
 	</tr>
 	<% end %>
 </table>
-
-<%= link_to 'Back', root_path %>
+</div>
+<br>
+<br>
+<%= link_to 'Back', root_path, class: 'btn btn-warning alink' %>
