@@ -1,5 +1,5 @@
 <h2>Drug:</h2>
-
+<br>
 <p>
 	<strong>Name:</strong>
 	<%= @drug.name %>
@@ -9,6 +9,6 @@
 	<strong>ATC code:</strong>
 	<%= @drug.atc %>
 </p>
-
-<%= link_to 'Back', drugs_path %>
-| <%= link_to 'Edit', edit_drug_path(@drug) %>
+<br>
+<%= link_to 'Back', drugs_path, class: 'btn btn-warning alink' %>
+| <%= link_to 'Edit', edit_drug_path(@drug), class: 'btn btn-primary btn-sm alink' %>

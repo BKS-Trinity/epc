@@ -1,23 +1,26 @@
-<h1>Listing drugs</h1>
-
-<%= link_to 'New drug', new_drug_path %>
-
-<table>
+<h1><center><b><u>Listing drugs</u></b></center></h1>
+<br>
+<br>
+<h4><%= link_to 'New drug', new_drug_path, class: 'patient' %></h4>
+<br>
+<div class="table-responsive">
+<table class="table table-bordered">
 	<tr>
 		<th>Name</th>
 		<th>ATC code</th>
-		<th colspan="3"></th>
+		<th colspan="3">Options</th>
 	</tr>
 	
 	<% @drugs.each do |drug| %>
 	<tr>
 		<td><%= drug.name %></td>
 		<td><%= drug.atc %></td>
-		<td><%= link_to 'Show', drug_path(drug) %></td>
-		<td><%= link_to 'Edit', edit_drug_path(drug) %></td>
-		<td><%= link_to 'Destroy', drug_path(drug), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		<td><%= link_to 'Show', drug_path(drug), class: 'btn btn-info btn-sm alink' %></td>
+		<td><%= link_to 'Edit', edit_drug_path(drug), class: 'btn btn-primary btn-sm alink' %></td>
+		<td><%= link_to 'Destroy', drug_path(drug), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm alink' %></td>
 	</tr>
 	<% end %>
 </table>
-
-<%= link_to 'Back', root_path %>
+</div>
+<br>
+<%= link_to 'Back', root_path, class: 'btn btn-warning alink' %>
