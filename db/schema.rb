@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160522082405) do
+ActiveRecord::Schema.define(version: 20160522102359) do
 
   create_table "appointments", force: true do |t|
     t.integer  "year"
@@ -114,5 +114,17 @@ ActiveRecord::Schema.define(version: 20160522082405) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "referrals", force: true do |t|
+    t.date     "dateofwriteout"
+    t.date     "expirydate"
+    t.string   "to"
+    t.text     "note"
+    t.integer  "medical_case_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "referrals", ["medical_case_id"], name: "index_referrals_on_medical_case_id"
 
 end
