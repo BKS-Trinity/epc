@@ -8,6 +8,10 @@ Rails.application.routes.draw do
 		resources :medical_cases
 	end
 	
+	resources :medical_cases do
+		resources :appointments
+	end
+	
 	resources :diseases
 	
 	resources :drugs
