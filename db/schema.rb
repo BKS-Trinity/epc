@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160522102359) do
+ActiveRecord::Schema.define(version: 20160603144106) do
 
   create_table "appointments", force: true do |t|
     t.integer  "year"
@@ -114,6 +114,23 @@ ActiveRecord::Schema.define(version: 20160522102359) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "prescriptiondrugs", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "prescription_id"
+    t.integer  "drug_id"
+  end
+
+  create_table "prescriptions", force: true do |t|
+    t.date     "dateofwriteout"
+    t.date     "expirydate"
+    t.integer  "medical_case_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "prescriptions", ["medical_case_id"], name: "index_prescriptions_on_medical_case_id"
 
   create_table "referrals", force: true do |t|
     t.date     "dateofwriteout"
