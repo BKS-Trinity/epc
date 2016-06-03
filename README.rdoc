@@ -1,28 +1,12 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Aby uruchomić aplikację należy wykonać kolejne kroki:
+* w wierszu poleceń przechodzimy do folderu aplikacji
+* tworzymy baze danych poleceniem: rake db:migrate
+* uruchamiamy serwer poleceniem: rails server
+* otwieramy aplikację wpisując w przeglądarce internetowej adres: http://localhost:3000/
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Wymagania:
+* Ruby 2.1
+* Ruby On Rails 4.1.8
+* SQLite3
