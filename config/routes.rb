@@ -8,6 +8,22 @@ Rails.application.routes.draw do
 		resources :medical_cases
 	end
 	
+	resources :medical_cases do
+		resources :appointments
+	end
+	
+	resources :medical_cases do
+		resources :referrals
+	end
+	
+	resources :medical_cases do
+		resources :prescriptions
+	end
+	
+	resources :prescriptions do
+		resources :prescriptiondrugs
+	end
+	
 	resources :diseases
 	
 	resources :drugs

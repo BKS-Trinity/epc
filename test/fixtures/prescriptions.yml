@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dateofwriteout: 2016-06-03
+  expirydate: 2016-06-03
+  medical_case_id: 
+
+two:
+  dateofwriteout: 2016-06-03
+  expirydate: 2016-06-03
+  medical_case_id: 

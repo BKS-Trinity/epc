@@ -1,0 +1,35 @@
+<%= form_for [@medical_case, @referral] do |f| %>
+	<% if @referral.errors.any? %>
+	<div id="error_explanation">
+		<h2><%= pluralize(@referral.errors.count, "error") %> prohibited this referral from being saved:</h2>
+		<ul>
+		<% @referral.errors.full_messages.each do |msg| %>
+			<li><%= msg %></li>
+		<% end %>
+		</ul>
+	</div>
+	<% end %>
+	<p>
+		<%= f.label :dateofwriteout, "Date of write out:" %><br>
+		<%= f.text_field :dateofwriteout %>
+	</p>
+	
+	<p>
+		<%= f.label :expirydate, "Expiry date:" %><br>
+		<%= f.text_field :expirydate %>
+	</p>
+	
+	<p>
+		<%= f.label :to, "To:" %><br>
+		<%= f.text_field :to %>
+	</p>
+	
+	<p>
+		<%= f.label :note, "Note:" %><br>
+		<%= f.text_area :note %>
+	</p>
+	
+	<p>
+		<%= f.submit %>
+	</p>
+<% end %>

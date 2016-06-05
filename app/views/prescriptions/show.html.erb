@@ -1,0 +1,44 @@
+<h2>Prescription:</h2>
+
+<p>
+	<strong>Date of write out:</strong>
+	<%= @prescription.dateofwriteout %>
+</p>
+
+<p>
+	<strong>Expiry date:</strong>
+	<%= @prescription.expirydate %>
+</p>
+
+<h2>Drugs:</h2>
+<% if @prescription.prescriptiondrugs.empty? %>
+	<p>
+		No drugs found for this prescription.
+	</p>
+<% else %>
+<table>
+	<tr>
+		<th>Name</th>
+		<th>ATC code</th>
+		<th colspan="1"></th>
+		
+	</tr>
+	
+	<% @prescription.prescriptiondrugs.each do |prescriptiondrug| %>
+	<% id = prescriptiondrug.drug_id %>
+	<tr>
+		<td><%= Drug.find(id).name %></td>
+		<td><%= Drug.find(id).atc %></td>
+		<td><%= link_to 'Destroy', prescription_prescriptiondrug_path(prescriptiondrug.prescription_id, prescriptiondrug),
+			method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	</tr>
+	<% end %>
+</table>
+<% end %>
+
+	<p>
+		<%= link_to 'Add a new drug', new_prescription_prescriptiondrug_path(@prescription) %>
+	</p>
+
+<%= link_to 'Back', medical_case_prescriptions_path %>
+| <%= link_to 'Edit', edit_medical_case_prescription_path(@prescription.medical_case_id, @prescription) %>

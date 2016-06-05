@@ -1,5 +1,6 @@
 == README
 
+<<<<<<< HEAD
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
@@ -30,3 +31,15 @@ Please feel free to use a different markup language if you do not plan to run
 ```
 git checkout --track origin/layout
 ```
+=======
+Aby uruchomić aplikację należy wykonać kolejne kroki:
+* w wierszu poleceń przechodzimy do folderu aplikacji
+* tworzymy baze danych poleceniem: rake db:migrate
+* uruchamiamy serwer poleceniem: rails server
+* otwieramy aplikację wpisując w przeglądarce internetowej adres: http://localhost:3000/
+
+Wymagania:
+* Ruby 2.1
+* Ruby On Rails 4.1.8
+* SQLite3
+>>>>>>> master

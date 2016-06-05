@@ -1,0 +1,29 @@
+<h2>Appointment:</h2>
+
+<p>
+	<strong>Year:</strong>
+	<%= @appointment.year %>
+</p>
+
+<p>
+	<strong>Month:</strong>
+	<%= @appointment.month %>
+</p>
+
+<p>
+	<strong>Day:</strong>
+	<%= @appointment.day %>
+</p>
+
+<p>
+	<strong>Hour:</strong>
+	<%= @appointment.hour %>
+</p>
+
+<p>
+	<strong>Minute:</strong>
+	<%= @appointment.minute %>
+</p>
+
+<%= link_to 'Back', medical_case_appointments_path %>
+| <%= link_to 'Edit', edit_medical_case_appointment_path(@appointment.medical_case_id, @appointment) %>

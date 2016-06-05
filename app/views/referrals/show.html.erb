@@ -1,0 +1,24 @@
+<h2>Referral:</h2>
+
+<p>
+	<strong>Date of write out:</strong>
+	<%= @referral.dateofwriteout %>
+</p>
+
+<p>
+	<strong>Expiry date:</strong>
+	<%= @referral.expirydate %>
+</p>
+
+<p>
+	<strong>To:</strong>
+	<%= @referral.to %>
+</p>
+
+<p>
+	<strong>Note:</strong>
+	<%= @referral.note %>
+</p>
+
+<%= link_to 'Back', medical_case_referrals_path %>
+| <%= link_to 'Edit', edit_medical_case_referral_path(@referral.medical_case_id, @referral) %>
