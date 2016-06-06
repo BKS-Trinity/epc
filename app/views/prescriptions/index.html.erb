@@ -1,24 +1,27 @@
 <h1>Listing prescriptions</h1>
+<br>
+<h4><%= link_to 'New prescription', new_medical_case_prescription_path, class: 'patient' %></h4>
+<br>
+<br>
 
-<%= link_to 'New prescription', new_medical_case_prescription_path %>
-
-<table>
+<div class="table-responsive">
+<table class="table table-bordered">
 	<tr>
 		<th>Date of write out</th>
 		<th>Expiry date</th>
-		<th colspan="3"></th>
+		<th colspan="3">Options</th>
 	</tr>
 	
 	<% @prescriptions.each do |prescription| %>
 	<tr>
 		<td><%= prescription.dateofwriteout %></td>
 		<td><%= prescription.expirydate %></td>
-		<td><%= link_to 'Show', medical_case_prescription_path(prescription.medical_case_id, prescription) %></td>
-		<td><%= link_to 'Edit', edit_medical_case_prescription_path(prescription.medical_case_id, prescription) %></td>
+		<td><%= link_to 'Show', medical_case_prescription_path(prescription.medical_case_id, prescription), class: 'btn btn-info btn-sm alink' %></td>
+		<td><%= link_to 'Edit', edit_medical_case_prescription_path(prescription.medical_case_id, prescription), class: 'btn btn-primary btn-sm alink' %></td>
 		<td><%= link_to 'Destroy', medical_case_prescription_path(prescription.medical_case_id, prescription),
-			method: :delete, data: { confirm: 'Are you sure?' } %></td>
+			method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm alink'  %></td>
 	</tr>
 	<% end %>
 </table>
-
-<%= link_to 'Back', [@medical_case.medical_record, @medical_case] %>
+</div>
+<%= link_to 'Back', [@medical_case.medical_record, @medical_case],  class: 'btn btn-warning alink' %>

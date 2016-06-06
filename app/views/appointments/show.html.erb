@@ -24,6 +24,6 @@
 	<strong>Minute:</strong>
 	<%= @appointment.minute %>
 </p>
-
-<%= link_to 'Back', medical_case_appointments_path %>
-| <%= link_to 'Edit', edit_medical_case_appointment_path(@appointment.medical_case_id, @appointment) %>
+<br>
+<%= link_to 'Back', medical_case_appointments_path, class: 'btn btn-warning btn-sm alink' %>
+| <%= link_to 'Edit', edit_medical_case_appointment_path(@appointment.medical_case_id, @appointment),  class: 'btn btn-primary btn-sm alink' %>

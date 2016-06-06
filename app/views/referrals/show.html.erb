@@ -19,6 +19,6 @@
 	<strong>Note:</strong>
 	<%= @referral.note %>
 </p>
-
-<%= link_to 'Back', medical_case_referrals_path %>
-| <%= link_to 'Edit', edit_medical_case_referral_path(@referral.medical_case_id, @referral) %>
+<br>
+<%= link_to 'Back', medical_case_referrals_path, class: 'btn btn-warning btn-sm alink' %>
+| <%= link_to 'Edit', edit_medical_case_referral_path(@referral.medical_case_id, @referral), class: 'btn btn-primary btn-sm alink' %>

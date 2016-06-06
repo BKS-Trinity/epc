@@ -16,7 +16,8 @@
 		No drugs found for this prescription.
 	</p>
 <% else %>
-<table>
+<div class="table-responsive">
+<table class="table table-bordered">
 	<tr>
 		<th>Name</th>
 		<th>ATC code</th>
@@ -34,11 +35,12 @@
 	</tr>
 	<% end %>
 </table>
+</div>
 <% end %>
 
 	<p>
-		<%= link_to 'Add a new drug', new_prescription_prescriptiondrug_path(@prescription) %>
+		<h4><%= link_to 'Add a new drug', new_prescription_prescriptiondrug_path(@prescription), class: 'patient' %></h4>
 	</p>
 
-<%= link_to 'Back', medical_case_prescriptions_path %>
-| <%= link_to 'Edit', edit_medical_case_prescription_path(@prescription.medical_case_id, @prescription) %>
+<%= link_to 'Back', medical_case_prescriptions_path,  class: 'btn btn-warning btn-sm alink' %>
+| <%= link_to 'Edit', edit_medical_case_prescription_path(@prescription.medical_case_id, @prescription), class: 'btn btn-primary btn-sm alink' %>

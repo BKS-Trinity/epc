@@ -14,27 +14,27 @@
 	<strong>Doctor:</strong>
 	<%= @medical_case.doctor_id %>
 </p>
-<<<<<<< HEAD
 <br>
-<%= link_to 'Back', medical_record_medical_cases_path, class: 'btn btn-warning alink' %>
+<%= link_to 'Back', medical_record_medical_cases_path, class: 'btn btn-warning btn-sm alink' %>
 | <%= link_to 'Edit', edit_medical_record_medical_case_path(@medical_case.medical_record_id, @medical_case), class: 'btn btn-primary btn-sm alink' %>
-=======
-
+<br>
+<br>
 <p>
 	<%= link_to 'Show appointments',
-		[@medical_case, @medical_case.appointments.build] %>
+		[@medical_case, @medical_case.appointments.build], class: 'btn btn-info btn-sm alink' %>
 </p>
-
+<br>
 <p>
 	<%= link_to 'Show referrals',
-		[@medical_case, @medical_case.referrals.build] %>
+		[@medical_case, @medical_case.referrals.build], class: 'btn btn-info btn-sm alink' %>
 </p>
-
+<br>
 <p>
 	<%= link_to 'Show prescriptions',
-		[@medical_case, @medical_case.prescriptions.build] %>
+		[@medical_case, @medical_case.prescriptions.build], class: 'btn btn-info btn-sm alink' %>
 </p>
+<br>
 
-<%= link_to 'Back', medical_record_medical_cases_path %>
-| <%= link_to 'Edit', edit_medical_record_medical_case_path(@medical_case.medical_record_id, @medical_case) %>
->>>>>>> master
+<%= link_to 'Back', medical_record_medical_cases_path,  class: 'btn btn-warning btn-sm alink' %>
+| <%= link_to 'Edit', edit_medical_record_medical_case_path(@medical_case.medical_record_id, @medical_case), class: 'btn btn-primary btn-sm alink' %>
+
