@@ -4,13 +4,16 @@
 
 <table>
 	<tr>
+		<th>No.</th>
 		<th>Date of write out</th>
 		<th>Expiry date</th>
 		<th colspan="3"></th>
 	</tr>
 	
+	<% no = 1 %>
 	<% @prescriptions.each do |prescription| %>
 	<tr>
+		<td><%= no %></td><% no = no + 1 %>
 		<td><%= prescription.dateofwriteout %></td>
 		<td><%= prescription.expirydate %></td>
 		<td><%= link_to 'Show', medical_case_prescription_path(prescription.medical_case_id, prescription) %></td>
