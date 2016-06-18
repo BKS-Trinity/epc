@@ -1,28 +1,8 @@
 <h2>Appointment:</h2>
 
 <p>
-	<strong>Year:</strong>
-	<%= @appointment.year %>
-</p>
-
-<p>
-	<strong>Month:</strong>
-	<%= @appointment.month %>
-</p>
-
-<p>
-	<strong>Day:</strong>
-	<%= @appointment.day %>
-</p>
-
-<p>
-	<strong>Hour:</strong>
-	<%= @appointment.hour %>
-</p>
-
-<p>
-	<strong>Minute:</strong>
-	<%= @appointment.minute %>
+	<strong>Date:</strong>
+	<%= @appointment.year.to_s+"/"+@appointment.month.to_s+"/"+@appointment.day.to_s+" "+@appointment.hour.to_s+":"+@appointment.minute.to_s %>
 </p>
 
 <%= link_to 'Back', medical_case_appointments_path %>
