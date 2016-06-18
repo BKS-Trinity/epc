@@ -7,12 +7,12 @@
 
 <p>
 	<strong>Disease:</strong>
-	<%= @medical_case.disease_id %>
+	<%= Disease.find(@medical_case.disease_id).name %>
 </p>
 
 <p>
 	<strong>Doctor:</strong>
-	<%= @medical_case.doctor_id %>
+	<%= Doctor.find(@medical_case.doctor_id).firstname + " " + Doctor.find(@medical_case.doctor_id).middlename + " " + Doctor.find(@medical_case.doctor_id).lastname %>
 </p>
 
 <p>
