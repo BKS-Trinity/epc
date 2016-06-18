@@ -16,12 +16,12 @@
 	
 	<p>
 		<%= f.label :disease_id, "Disease:" %><br>
-		<%= f.text_field :disease_id %>
+		<%= f.select :disease_id, Disease.all.collect {|p| [ p.name, p.id ] } %>
 	</p>
 	
 	<p>
 		<%= f.label :doctor_id, "Doctor:" %><br>
-		<%= f.text_field :doctor_id %>
+		<%= f.select :doctor_id, Doctor.all.collect {|p| [ p.firstname+" "+p.middlename+" "+p.lastname, p.id ] } %>
 	</p>
 	
 	<p>
