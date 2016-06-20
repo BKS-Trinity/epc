@@ -6,23 +6,18 @@
 <div class="table-responsive">
 <table class="table table-bordered">
 	<tr>
-		<th>Year</th>
-		<th>Month</th>
-		<th>Day</th>
-		<th>Hour</th>
-		<th>Minute</th>
-		<th colspan="3">Options</th>
+		<th>No.</th>
+		<th>Date</th>
+		<th colspan="3"></th>
 	</tr>
 	
+	<% no = 1 %>
 	<% @appointments.each do |appointment| %>
 	<tr>
-		<td><%= appointment.year %></td>
-		<td><%= appointment.month %></td>
-		<td><%= appointment.day %></td>
-		<td><%= appointment.hour %></td>
-		<td><%= appointment.minute %></td>
-		<td><%= link_to 'Show', medical_case_appointment_path(appointment.medical_case_id, appointment), class: 'btn btn-info btn-sm alink' %></td>
-		<td><%= link_to 'Edit', edit_medical_case_appointment_path(appointment.medical_case_id, appointment), class: 'btn btn-primary btn-sm alink' %></td>
+		<td><%= no %></td><% no = no + 1 %>
+		<td><%= appointment.year.to_s+"/"+appointment.month.to_s+"/"+appointment.day.to_s+" "+appointment.hour.to_s+":"+appointment.minute.to_s %></td>
+		<td><%= link_to 'Show', medical_case_appointment_path(appointment.medical_case_id, appointment) %></td>
+		<td><%= link_to 'Edit', edit_medical_case_appointment_path(appointment.medical_case_id, appointment) %></td>
 		<td><%= link_to 'Destroy', medical_case_appointment_path(appointment.medical_case_id, appointment),
 			method: :delete, data: { confirm: 'Are you sure?'},  class: 'btn btn-danger btn-sm alink' %></td>
 	</tr>

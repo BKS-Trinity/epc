@@ -9,17 +9,15 @@
 		</ul>
 	</div>
 	<% end %>
-	<p>
-		<%= f.label :prescription_id, "Prescription:" %><br>
-		<%= f.text_field :prescription_id %>
-	</p>
+
+	<%= f.hidden_field :prescription_id %>
 	
 	<p>
 		<%= f.label :drug_id, "Drug:" %><br>
-		<%= f.text_field :drug_id %>
+		<%= f.select :drug_id, Drug.all.collect {|p| [ p.name, p.id ] } %>
 	</p>
 	<br>
 	<p>
-		<%= f.submit class: 'btn btn-success custom' %>
+		<%= f.submit "Add" class: 'btn btn-success custom' %>
 	</p>
 <% end %>
